@@ -1,0 +1,9 @@
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.csproj.AssemblyReference.cache
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.Properties.Resources.resources
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.csproj.GenerateResource.cache
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.csproj.CoreCompileInputs.cache
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\bin\Debug\a2233336160_Tareas_Unidad01.exe.config
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\bin\Debug\a2233336160_Tareas_Unidad01.exe
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\bin\Debug\a2233336160_Tareas_Unidad01.pdb
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.exe
+C:\Users\ed_li\source\repos\a2233336160_Tareas_Unidad01\a2233336160_Tareas_Unidad01\obj\Debug\a2233336160_Tareas_Unidad01.pdb
