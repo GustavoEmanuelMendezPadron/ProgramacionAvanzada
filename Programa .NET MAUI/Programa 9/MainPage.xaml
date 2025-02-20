@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanAssistantMAUI.MainPage">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Asistente de Préstamos" FontSize="24" HorizontalOptions="Center" />
+
+        <Label Text="Saldo del Préstamo:" />
+        <Entry x:Name="balanceEntry" Keyboard="Numeric" />
+
+        <Label Text="Tasa de Interés (% anual):" />
+        <Entry x:Name="interestEntry" Keyboard="Numeric" />
+
+        <Label Text="Número de Pagos:" />
+        <Entry x:Name="monthsEntry" Keyboard="Numeric" />
+
+        <Label Text="Pago Mensual:" />
+        <Entry x:Name="paymentEntry" IsReadOnly="True" BackgroundColor="LightYellow" />
+
+        <Button Text="Calcular Pago Mensual" Clicked="OnComputeClicked" />
+        <Button Text="Nuevo Cálculo" Clicked="OnResetClicked" IsEnabled="False" x:Name="newLoanButton"/>
+        <Button Text="Salir" Clicked="OnExitClicked" />
+
+        <Editor x:Name="analysisEditor" HeightRequest="120" IsReadOnly="True" BackgroundColor="WhiteSmoke"/>
+    </VerticalStackLayout>
+</ContentPage>
