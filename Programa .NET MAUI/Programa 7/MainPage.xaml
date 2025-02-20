@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CafePOS.MainPage"
+             Title="Cafetería POS"
+             BackgroundColor="#FFF5E1">
+
+    <StackLayout Padding="20">
+        <!-- Título -->
+        <Label Text="Cafetería POS" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" 
+               TextColor="#6D4C41" />
+
+        <!-- Lista de Productos -->
+        <Label Text="Selecciona tu café:" 
+               FontSize="18" 
+               TextColor="#6D4C41" 
+               Margin="0,20,0,10" />
+
+        <Picker x:Name="ProductPicker" 
+                Title="Selecciona un producto" 
+                TextColor="#6D4C41" 
+                BackgroundColor="#FFFFFF" 
+                Margin="0,0,0,20">
+            <Picker.Items>
+                <x:String>Café Americano</x:String>
+                <x:String>Café Latte</x:String>
+                <x:String>Cappuccino</x:String>
+                <x:String>Espresso</x:String>
+                <x:String>Mocha</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!-- Cantidad -->
+        <Label Text="Cantidad:" 
+               FontSize="18" 
+               TextColor="#6D4C41" 
+               Margin="0,0,0,10" />
+
+        <Entry x:Name="QuantityEntry" 
+               Placeholder="Ingresa la cantidad" 
+               Keyboard="Numeric" 
+               TextColor="#6D4C41" 
+               BackgroundColor="#FFFFFF" 
+               Margin="0,0,0,20" />
+
+        <!-- Botón de Agregar al Carrito -->
+        <Button Text="Agregar al Carrito" 
+                BackgroundColor="#6D4C41" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                Clicked="OnAddToCartClicked" 
+                Margin="0,0,0,20" />
+
+        <!-- Lista de Pedidos -->
+        <Label Text="Tu Pedido:" 
+               FontSize="18" 
+               TextColor="#6D4C41" 
+               Margin="0,0,0,10" />
+
+        <ListView x:Name="OrderListView" 
+                  BackgroundColor="#FFFFFF">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" 
+                              Detail="{Binding Quantity, StringFormat='Cantidad: {0}'}" 
+                              TextColor="#6D4C41" 
+                              DetailColor="#6D4C41" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Total -->
+        <Label x:Name="TotalLabel" 
+               FontSize="18" 
+               TextColor="#6D4C41" 
+               Margin="0,20,0,10" />
+
+        <!-- Botón de Finalizar Pedido -->
+        <Button Text="Finalizar Pedido" 
+                BackgroundColor="#6D4C41" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                Clicked="OnCheckoutClicked" 
+                Margin="0,0,0,20" />
+    </StackLayout>
+</ContentPage>
