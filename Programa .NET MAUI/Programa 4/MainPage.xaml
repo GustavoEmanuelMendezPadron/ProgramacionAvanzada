@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             Title="User Information Form"
+             BackgroundColor="#FFFFFF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#6C63FF</Color>
+            <Color x:Key="SecondaryColor">#F8F9FA</Color>
+            <Color x:Key="TextColor">#2D3436</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="14,8"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+                <Setter Property="PlaceholderColor" Value="#ADB5BD"/>
+                <Setter Property="HeightRequest" Value="40"/>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Show Form Button -->
+            <Button x:Name="btnShowForm"
+                    Text="Show Form"
+                    Clicked="OnShowFormClicked"/>
+
+            <!-- Form Container -->
+            <Frame x:Name="formFrame"
+                   IsVisible="False"
+                   BackgroundColor="{StaticResource SecondaryColor}"
+                   CornerRadius="10"
+                   Padding="20">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                      ColumnDefinitions="150,250"
+                      RowSpacing="15"
+                      ColumnSpacing="20">
+
+                    <!-- Form Fields -->
+                    <Label Text="Name:" Grid.Row="0" Grid.Column="0"/>
+                    <Entry x:Name="nameEntry" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Occupation:" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="occupationEntry" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Age:" Grid.Row="2" Grid.Column="0"/>
+                    <Picker x:Name="agePicker" Grid.Row="2" Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Under 18</x:String>
+                            <x:String>18 to 65</x:String>
+                            <x:String>65 or over</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Employment:" Grid.Row="3" Grid.Column="0"/>
+                    <Picker x:Name="employmentPicker" Grid.Row="3" Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Employed</x:String>
+                            <x:String>Unemployed</x:String>
+                            <x:String>Student</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="US Citizen:" Grid.Row="4" Grid.Column="0"/>
+                    <CheckBox x:Name="usCitizenCheckBox" Grid.Row="4" Grid.Column="1"/>
+
+                    <Label Text="Gender:" Grid.Row="5" Grid.Column="0"/>
+                    <VerticalStackLayout Grid.Row="5" Grid.Column="1">
+                        <RadioButton x:Name="maleRadio" Content="Male" GroupName="Gender"/>
+                        <RadioButton x:Name="femaleRadio" Content="Female" GroupName="Gender"/>
+                    </VerticalStackLayout>
+
+                    <Button Text="OK" 
+                            Grid.Row="6" 
+                            Grid.Column="1"
+                            Clicked="OnSubmitClicked"/>
+                </Grid>
+            </Frame>
+
+            <!-- Display Area -->
+            <Editor x:Name="displayEditor"
+                    HeightRequest="150"
+                    Margin="0,20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
